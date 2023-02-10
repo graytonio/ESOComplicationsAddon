@@ -6,9 +6,12 @@
 
 ## Title: ESOComplications
 ## APIVersion: 100025
+## Description: Small UI addons for displaying information
 
 ESOComplications_Main.lua
 
 ; Widgets
 InventorySpace_Widget.lua
 TeleportCost_Widget.lua
+Ping_Widget.lua
+FPS_Widget.lua

@@ -1,17 +1,17 @@
 local BAG_ICON = "|t16:16:/esoui/art/tooltips/icon_bag.dds|t "
 ESOComplications_TeleportCostWidget = {
-    Name = "ESOC_TeleportCostWidget"
+    Name = "ESOC_TeleportCostWidget",
+    Width = 50,
+    Order = 3,
 }
 
-local function InitEvents()
+function ESOComplications_TeleportCostWidget.InitEvents()
     EVENT_MANAGER:RegisterForUpdate(ESOComplications_TeleportCostWidget.Name, 5000, ESOComplications_TeleportCostWidget.OnUpdate)
 end
 
-local function InitUI()
+function ESOComplications_TeleportCostWidget.InitUI()
     ESOComplications_TeleportCostWidget.Widget = WINDOW_MANAGER:CreateControl("ESOC_TeleportCost", ZO_PerformanceMeters, CT_LABEL)
-    ESOComplications_TeleportCostWidget.Widget:SetDimensions(75, 40)
-    ESOComplications_TeleportCostWidget.Widget:ClearAnchors()
-    ESOComplications_TeleportCostWidget.Widget:SetAnchor(LEFT, ESOC_BagSpace, RIGHT, -10, 0)
+    ESOComplications_TeleportCostWidget.Widget:SetDimensions(ESOComplications_TeleportCostWidget.Width, 40)
     ESOComplications_TeleportCostWidget.Widget:SetFont("ZoFontWinT2")
     ESOComplications_TeleportCostWidget.Widget:SetColor(1, 1, 1, 1)
     ESOComplications_TeleportCostWidget.Widget:SetHorizontalAlignment(0)
@@ -25,9 +25,9 @@ function ESOComplications_TeleportCostWidget.OnUpdate()
 end
 
 function ESOComplications_TeleportCostWidget.Initialize()
-    InitUI()
-    InitEvents()
+    ESOComplications_TeleportCostWidget.InitUI()
+    ESOComplications_TeleportCostWidget.InitEvents()
     ESOComplications_TeleportCostWidget.OnUpdate()
 end
 
-ESOComplications.RegisterWidget("ESOC_TeleportCostWidget", ESOComplications_TeleportCostWidget.Initialize)
+ESOComplications.RegisterWidget("ESOC_TeleportCostWidget", ESOComplications_TeleportCostWidget)
