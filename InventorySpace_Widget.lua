@@ -1,7 +1,7 @@
 local BAG_ICON = "|t16:16:/esoui/art/tooltips/icon_bag.dds|t "
 ESOComplications_InventoryWidget = {
     Name = "ESOC_InventoryWidget",
-    Width = 60,
+    Width = 65,
     Order = 2
 }
 

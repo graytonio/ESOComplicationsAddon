@@ -1,4 +1,4 @@
-local BAG_ICON = "|t16:16:/esoui/art/tooltips/icon_bag.dds|t "
+local BAG_ICON = "|t24:24:/esoui/art/icons/poi/poi_wayshrine_complete.dds|t "
 ESOComplications_TeleportCostWidget = {
     Name = "ESOC_TeleportCostWidget",
     Width = 50,
