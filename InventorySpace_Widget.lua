@@ -15,7 +15,7 @@ function ESOComplications_InventoryWidget.InitEvents()
 end
 
 function ESOComplications_InventoryWidget.InitUI() 
-    ESOComplications_InventoryWidget.Widget = WINDOW_MANAGER:CreateControl("ESOC_BagSpace", ZO_PerformanceMeters, CT_LABEL)
+    ESOComplications_InventoryWidget.Widget = WINDOW_MANAGER:CreateControl(ESOComplications_InventoryWidget.Name, ZO_PerformanceMeters, CT_LABEL)
     ESOComplications_InventoryWidget.Widget:SetDimensions(ESOComplications_InventoryWidget.Width, 40)
     ESOComplications_InventoryWidget.Widget:SetFont("ZoFontWinT2")
     ESOComplications_InventoryWidget.Widget:SetColor(1, 1, 1, 1)
@@ -36,4 +36,4 @@ function ESOComplications_InventoryWidget.Initialize()
     ESOComplications_InventoryWidget.OnUpdate()
    end
 
-ESOComplications.RegisterWidget("ESOC_InventoryWidget", ESOComplications_InventoryWidget)
+ESOComplications.RegisterWidget(ESOComplications_InventoryWidget.Name, ESOComplications_InventoryWidget)

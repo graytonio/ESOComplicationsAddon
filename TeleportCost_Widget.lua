@@ -1,7 +1,7 @@
 local BAG_ICON = "|t24:24:/esoui/art/icons/poi/poi_wayshrine_complete.dds|t "
 ESOComplications_TeleportCostWidget = {
     Name = "ESOC_TeleportCostWidget",
-    Width = 50,
+    Width = 60,
     Order = 3,
 }
 
@@ -10,7 +10,7 @@ function ESOComplications_TeleportCostWidget.InitEvents()
 end
 
 function ESOComplications_TeleportCostWidget.InitUI()
-    ESOComplications_TeleportCostWidget.Widget = WINDOW_MANAGER:CreateControl("ESOC_TeleportCost", ZO_PerformanceMeters, CT_LABEL)
+    ESOComplications_TeleportCostWidget.Widget = WINDOW_MANAGER:CreateControl(ESOComplications_TeleportCostWidget.Name, ZO_PerformanceMeters, CT_LABEL)
     ESOComplications_TeleportCostWidget.Widget:SetDimensions(ESOComplications_TeleportCostWidget.Width, 40)
     ESOComplications_TeleportCostWidget.Widget:SetFont("ZoFontWinT2")
     ESOComplications_TeleportCostWidget.Widget:SetColor(1, 1, 1, 1)
@@ -30,4 +30,4 @@ function ESOComplications_TeleportCostWidget.Initialize()
     ESOComplications_TeleportCostWidget.OnUpdate()
 end
 
-ESOComplications.RegisterWidget("ESOC_TeleportCostWidget", ESOComplications_TeleportCostWidget)
+ESOComplications.RegisterWidget(ESOComplications_TeleportCostWidget.Name, ESOComplications_TeleportCostWidget)

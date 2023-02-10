@@ -15,3 +15,4 @@ InventorySpace_Widget.lua
 TeleportCost_Widget.lua
 Ping_Widget.lua
 FPS_Widget.lua
+Gold_Widget.lua

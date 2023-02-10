@@ -1,6 +1,6 @@
 ESOComplications_FPSWidget = {
     Name = "EOS_FPSWidget",
-    Width = 50,
+    Width = 60,
     Order = 0,
 }
 
