@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - "release-*"
+      - "v*"
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
       # Extract version from tag
       - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/release-}" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v*}" >> $GITHUB_ENV
 
       # Ensure version is set correct
       - name: Run versioning script
